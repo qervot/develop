@@ -1,4 +1,4 @@
-package com.ibm.journey.gdpr.bl;
+package com.ibm.journey.gdpr.config;
 
 import java.util.ArrayList;
 import java.util.List;

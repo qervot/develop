@@ -1,8 +1,7 @@
-package com.ibm.journey.gdpr.bl;
+package com.ibm.journey.gdpr.config;
 
 import org.apache.log4j.Logger;
 
-import com.ibm.journey.gdpr.config.GDPRConfig;
 import com.ibm.json.java.JSONArray;
 import com.ibm.json.java.JSONObject;
 

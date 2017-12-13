@@ -11,9 +11,10 @@ import javax.ws.rs.core.Application;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import com.ibm.journey.gdpr.config.PIIDataExtractor;
 import org.apache.log4j.Logger;
 
-import com.ibm.journey.gdpr.bl.PIIDataExtractor;
+
 import com.ibm.json.java.JSONObject;
 
 /**
