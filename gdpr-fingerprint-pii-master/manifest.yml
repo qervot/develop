@@ -1,0 +1,25 @@
+declared-services:
+    NLUGDPR:
+        label: natural-language-understanding
+        plan: free
+applications:
+- instances: 1
+  domain: mybluemix.net
+  buildpack: liberty-for-java
+  path: target/PersonalDataScorer.war
+  services:
+    - NLUGDPR
+  env:
+    Categories: Very_High,High,Medium,Low
+    Very_High_Weight: 50
+    High_Weight: 40
+    Medium_Weight: 20
+    Low_Weight: 10
+    Very_High_PIIs: MobileNumber
+    High_PIIs: Person,DOB,EmailId
+    Medium_PIIs: Name,DOJ
+    Low_PIIs: Company
+    regex_params: DOB,DOJ
+    DOB_regex: (0[1-9]|[12][0-9]|3[01])[- /.](Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[- /.](19|20)\d\d
+    DOJ_regex: (0[1-9]|[12][0-9]|3[01])[- /.](Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[- /.]\\d\\d
+    wks_model: 10:b7a9e265-5325-45bd-b1c7-38a063097179
